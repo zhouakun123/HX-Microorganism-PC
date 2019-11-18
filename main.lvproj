@@ -12,6 +12,8 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="handle_data.vi" Type="VI" URL="../handle_data.vi"/>
 		<Item Name="main.vi" Type="VI" URL="../main.vi"/>
+		<Item Name="NI_Excel.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Utility/NIReport.llb/Excel/NI_Excel.lvclass"/>
+		<Item Name="NI_ReportGenerationToolkit.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_office/NI_ReportGenerationToolkit.lvlib"/>
 		<Item Name="recive_data_frame.vi" Type="VI" URL="../recive_data_frame.vi"/>
 		<Item Name="save_data.vi" Type="VI" URL="../save_data.vi"/>
 		<Item Name="Template.xltx" Type="Document" URL="../Template.xltx"/>
@@ -20,6 +22,7 @@
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
 				<Item Name="Bit-array To Byte-array.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Bit-array To Byte-array.vi"/>
+				<Item Name="Build Exp Wvfrm (Wvfrm).vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/Build Exp Wvfrm (Wvfrm).vi"/>
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
 				<Item Name="Built App File Layout.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/Built App File Layout.vi"/>
 				<Item Name="Calc Long Word Padded Width.vi" Type="VI" URL="/&lt;vilib&gt;/picture/bmp.llb/Calc Long Word Padded Width.vi"/>
@@ -31,6 +34,7 @@
 				<Item Name="Check Special Tags.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Check Special Tags.vi"/>
 				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 				<Item Name="Close Registry Key.vi" Type="VI" URL="/&lt;vilib&gt;/registry/registry.llb/Close Registry Key.vi"/>
+				<Item Name="compatFileDialog.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatFileDialog.vi"/>
 				<Item Name="compatOverwrite.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatOverwrite.vi"/>
 				<Item Name="Convert property node font to graphics font.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Convert property node font to graphics font.vi"/>
 				<Item Name="Create ActiveX Event Queue.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/ax-events.llb/Create ActiveX Event Queue.vi"/>
@@ -38,21 +42,46 @@
 				<Item Name="Create Mask By Alpha.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Create Mask By Alpha.vi"/>
 				<Item Name="Destroy ActiveX Event Queue.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/ax-events.llb/Destroy ActiveX Event Queue.vi"/>
 				<Item Name="Details Display Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Details Display Dialog.vi"/>
+				<Item Name="Dflt Data Dir.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Dflt Data Dir.vi"/>
 				<Item Name="DialogType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/DialogType.ctl"/>
 				<Item Name="DialogTypeEnum.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/DialogTypeEnum.ctl"/>
 				<Item Name="Directory of Top Level VI.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Directory of Top Level VI.vi"/>
+				<Item Name="Dynamic To Waveform Array.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/Dynamic To Waveform Array.vi"/>
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
 				<Item Name="Error Code Database.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Code Database.vi"/>
 				<Item Name="ErrWarn.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/ErrWarn.ctl"/>
 				<Item Name="Escape Characters for HTTP.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Escape Characters for HTTP.vi"/>
 				<Item Name="EventData.ctl" Type="VI" URL="/&lt;vilib&gt;/Platform/ax-events.llb/EventData.ctl"/>
 				<Item Name="eventvkey.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventvkey.ctl"/>
+				<Item Name="ex_Disable.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Disable.vi"/>
+				<Item Name="ex_Enable.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Enable.vi"/>
+				<Item Name="ex_ExpandPathIfRelative.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ExFile.llb/ex_ExpandPathIfRelative.vi"/>
+				<Item Name="ex_Get All Control Refnums.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Get All Control Refnums.vi"/>
+				<Item Name="ex_Get Control Refnum.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Get Control Refnum.vi"/>
+				<Item Name="ex_Get CtrlRefs for PropPage.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Get CtrlRefs for PropPage.vi"/>
+				<Item Name="ex_GetAllConstantRefnums.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_GetAllConstantRefnums.vi"/>
+				<Item Name="ex_GetAllExpressAttribs.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/ex_GetAllExpressAttribs.vi"/>
+				<Item Name="ex_Grow Inputs and Outputs.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Grow Inputs and Outputs.vi"/>
+				<Item Name="ex_Launch Express VI Help.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Launch Express VI Help.vi"/>
+				<Item Name="ex_Make Hidden Tag.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Make Hidden Tag.vi"/>
+				<Item Name="ex_PercentGFormat.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_PercentGFormat.vi"/>
+				<Item Name="ex_PPGetProp.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_PPGetProp.vi"/>
+				<Item Name="ex_PPGetValue.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_PPGetValue.vi"/>
+				<Item Name="ex_Read Properties.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Read Properties.vi"/>
+				<Item Name="ex_Reconfigure.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Reconfigure.vi"/>
+				<Item Name="ex_Redrop Instance VI.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Redrop Instance VI.vi"/>
+				<Item Name="ex_SetAllExpressAttribs.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/ex_SetAllExpressAttribs.vi"/>
+				<Item Name="ex_WaveformAttribs.ctl" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/ex_WaveformAttribs.ctl"/>
+				<Item Name="ex_Write Properties.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Write Properties.vi"/>
+				<Item Name="Express Waveform Components.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/Express Waveform Components.vi"/>
 				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
 				<Item Name="Flip and Pad for Picture Control.vi" Type="VI" URL="/&lt;vilib&gt;/picture/bmp.llb/Flip and Pad for Picture Control.vi"/>
 				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
 				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
 				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
 				<Item Name="Generate Temporary File Path.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Generate Temporary File Path.vi"/>
+				<Item Name="Get Control Refnums No Error.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/Get Control Refnums No Error.vi"/>
+				<Item Name="Get Control Refnums.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/Get Control Refnums.vi"/>
 				<Item Name="Get File Extension.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Get File Extension.vi"/>
 				<Item Name="Get LV Class Default Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Default Value.vi"/>
 				<Item Name="Get String Text Bounds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Get String Text Bounds.vi"/>
@@ -64,18 +93,20 @@
 				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
-				<Item Name="NI_Excel.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Utility/NIReport.llb/Excel/NI_Excel.lvclass"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
 				<Item Name="NI_HTML.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Utility/NIReport.llb/HTML/NI_HTML.lvclass"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="NI_report.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Utility/NIReport.llb/NI_report.lvclass"/>
 				<Item Name="NI_ReportGenerationCore.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/NIReport.llb/NI_ReportGenerationCore.lvlib"/>
-				<Item Name="NI_ReportGenerationToolkit.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_office/NI_ReportGenerationToolkit.lvlib"/>
 				<Item Name="NI_Standard Report.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Utility/NIReport.llb/Standard Report/NI_Standard Report.lvclass"/>
+				<Item Name="NI_Word.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Utility/NIReport.llb/Word/NI_Word.lvclass"/>
 				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
+				<Item Name="Number of Waveform Samples.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/Number of Waveform Samples.vi"/>
 				<Item Name="OccFireType.ctl" Type="VI" URL="/&lt;vilib&gt;/Platform/ax-events.llb/OccFireType.ctl"/>
 				<Item Name="Open Registry Key.vi" Type="VI" URL="/&lt;vilib&gt;/registry/registry.llb/Open Registry Key.vi"/>
 				<Item Name="Path to URL.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL.vi"/>
+				<Item Name="propPageData.ctl" Type="VI" URL="/&lt;vilib&gt;/express/express shared/propPageData.ctl"/>
+				<Item Name="propPagePersistenceType.ctl" Type="VI" URL="/&lt;vilib&gt;/express/express shared/propPagePersistenceType.ctl"/>
 				<Item Name="Read JPEG File.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Read JPEG File.vi"/>
 				<Item Name="Read PNG File.vi" Type="VI" URL="/&lt;vilib&gt;/picture/png.llb/Read PNG File.vi"/>
 				<Item Name="Read Registry Value DWORD.vi" Type="VI" URL="/&lt;vilib&gt;/registry/registry.llb/Read Registry Value DWORD.vi"/>
@@ -94,20 +125,35 @@
 				<Item Name="RGB to Color.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/RGB to Color.vi"/>
 				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
+				<Item Name="Set Busy.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Busy.vi"/>
+				<Item Name="Set Cursor (Cursor ID).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Cursor (Cursor ID).vi"/>
+				<Item Name="Set Cursor (Icon Pict).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Cursor (Icon Pict).vi"/>
+				<Item Name="Set Cursor.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Cursor.vi"/>
 				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
 				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="STR_ASCII-Unicode.vi" Type="VI" URL="/&lt;vilib&gt;/registry/registry.llb/STR_ASCII-Unicode.vi"/>
+				<Item Name="subCalcPropPageCtlName.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/subCalcPropPageCtlName.vi"/>
 				<Item Name="TagReturnType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/TagReturnType.ctl"/>
 				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
 				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
+				<Item Name="Unset Busy.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Unset Busy.vi"/>
 				<Item Name="VISA Configure Serial Port" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port"/>
 				<Item Name="VISA Configure Serial Port (Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Instr).vi"/>
 				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
 				<Item Name="Wait On ActiveX Event.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/ax-events.llb/Wait On ActiveX Event.vi"/>
 				<Item Name="Wait types.ctl" Type="VI" URL="/&lt;vilib&gt;/Platform/ax-events.llb/Wait types.ctl"/>
+				<Item Name="Waveform Array To Dynamic.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/Waveform Array To Dynamic.vi"/>
+				<Item Name="WDT Number of Waveform Samples CDB.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Number of Waveform Samples CDB.vi"/>
+				<Item Name="WDT Number of Waveform Samples DBL.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Number of Waveform Samples DBL.vi"/>
+				<Item Name="WDT Number of Waveform Samples EXT.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Number of Waveform Samples EXT.vi"/>
+				<Item Name="WDT Number of Waveform Samples I8.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Number of Waveform Samples I8.vi"/>
+				<Item Name="WDT Number of Waveform Samples I16.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Number of Waveform Samples I16.vi"/>
+				<Item Name="WDT Number of Waveform Samples I32.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Number of Waveform Samples I32.vi"/>
+				<Item Name="WDT Number of Waveform Samples SGL.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Number of Waveform Samples SGL.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
+				<Item Name="Word Open method.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_office/word.llb/Word Open method.vi"/>
 				<Item Name="Write BMP Data To Buffer.vi" Type="VI" URL="/&lt;vilib&gt;/picture/bmp.llb/Write BMP Data To Buffer.vi"/>
 				<Item Name="Write BMP Data.vi" Type="VI" URL="/&lt;vilib&gt;/picture/bmp.llb/Write BMP Data.vi"/>
 				<Item Name="Write BMP File.vi" Type="VI" URL="/&lt;vilib&gt;/picture/bmp.llb/Write BMP File.vi"/>
@@ -139,7 +185,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{14B68029-F99B-4386-8848-50DF1106013F}</Property>
-				<Property Name="Bld_version.build" Type="Int">11</Property>
+				<Property Name="Bld_version.build" Type="Int">14</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">ColorView.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/ColorView.exe</Property>
@@ -150,45 +196,45 @@
 				<Property Name="Destination[1].path" Type="Path">../builds</Property>
 				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[0]" Type="Str">{65540D1B-61DE-434A-9693-E14607B9427D}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[1]" Type="Str">{BA4D342A-5B07-4FDF-8758-A201D4B7633C}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[10]" Type="Str">{D5C26670-DD3A-45C0-9350-BD2E7642BDB8}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[11]" Type="Str">{C6A41F2A-C692-492C-9EF1-0FEEC27BCC8D}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[12]" Type="Str">{DEB4A5BF-806D-497B-8BAE-11F4CEC070E8}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[13]" Type="Str">{F71908C5-54CA-40DB-9BE8-7520BADF6FEF}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[14]" Type="Str">{4A716139-FE9C-410E-95BD-1126A2D9F1D6}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[15]" Type="Str">{C81313DB-4F66-4124-8DD4-0142BBF39968}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[16]" Type="Str">{B72696FE-CD47-42E1-98B8-D4FEFF99471A}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[2]" Type="Str">{109DB6A5-85CB-4614-A7C4-EF9BF079AA5A}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[3]" Type="Str">{0FB4362C-E07B-44DD-827D-BE425A0B3F8C}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[4]" Type="Str">{17ABD2DE-2E84-4A32-A198-35E4C6F6BC38}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[5]" Type="Str">{BC007378-DEE3-4B77-9B82-5879041A7400}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[6]" Type="Str">{60E2617D-EA73-4F90-BABA-72380A09657D}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[7]" Type="Str">{E8F363F9-039A-45B1-B8D3-FD736142E23D}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[8]" Type="Str">{774A5C4A-98AE-4939-AE34-7B77BF5F9CBB}</Property>
-				<Property Name="Exe_actXinfo_enumCLSID[9]" Type="Str">{E46D5118-7AE3-4B01-9ACE-9526D525AB86}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[0]" Type="Str">{23564A3A-3A03-441E-9339-381C04981BD4}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[1]" Type="Str">{A3358876-4504-491F-AA28-028BF1B2941B}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[10]" Type="Str">{48CF4E47-7A51-4558-9BCC-DF1BB9A9D4DC}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[11]" Type="Str">{23504BBB-76B4-41E9-9710-9DDB386B6102}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[12]" Type="Str">{129ED570-9CE9-4CD6-810E-563C2784B6C3}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[13]" Type="Str">{541D401B-2F56-4E58-8CB2-DCD68D3FEBFB}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[14]" Type="Str">{7D034F01-F444-4BBF-9013-B68A0F99D671}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[15]" Type="Str">{A5C9486E-5AF7-47F2-8F63-A23C7F4DC7CF}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[16]" Type="Str">{BA58A279-315D-4477-A30E-FCD5726BB119}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[2]" Type="Str">{E9ECB0FC-C532-40ED-9691-7559F1C73F83}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[3]" Type="Str">{9C1E33E9-F76E-4C76-8DF5-6E23B850FA79}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[4]" Type="Str">{D6B23EDD-7429-4DAF-BBFD-D853F2D55512}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[5]" Type="Str">{A369C3CC-E546-423F-8FB7-CD84DEA7E844}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[6]" Type="Str">{4499AC8B-DE57-4173-AD6C-A6016DBDE610}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[7]" Type="Str">{F4B08BE3-41A5-4F3E-B321-2BF9CF90699F}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[8]" Type="Str">{487DC60F-430F-4494-8E25-3DA9B9604B98}</Property>
+				<Property Name="Exe_actXinfo_enumCLSID[9]" Type="Str">{43B5B1D7-E7AC-435D-98F7-FD7516606DFF}</Property>
 				<Property Name="Exe_actXinfo_enumCLSIDsCount" Type="Int">17</Property>
 				<Property Name="Exe_actXinfo_majorVersion" Type="Int">5</Property>
 				<Property Name="Exe_actXinfo_minorVersion" Type="Int">5</Property>
-				<Property Name="Exe_actXinfo_objCLSID[0]" Type="Str">{D2388FFF-4476-4933-B603-6ACB91FE6F27}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[1]" Type="Str">{79270195-30AE-449F-A4A8-C6E4FE5EFC11}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[10]" Type="Str">{3C6F78F4-D4AF-45E4-BF2C-561789A6CBDE}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[11]" Type="Str">{AAB0A718-0C13-45FB-B296-8454D426D38F}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[12]" Type="Str">{A4A15175-AB4D-475C-906E-404F13962D52}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[13]" Type="Str">{E7235C2C-16F7-445D-AE8F-D625651186F9}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[2]" Type="Str">{0F9D7668-7614-47C9-8F4E-6845E50A42E1}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[3]" Type="Str">{0F25347B-EA2E-4AA9-B002-121F8173941F}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[4]" Type="Str">{1640322F-20EB-4268-8D8C-D0AB4D1F2CA1}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[5]" Type="Str">{79E09321-A802-430F-B5D2-3C7A2351DBB9}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[6]" Type="Str">{953C6F6C-B22E-436F-A20C-929C9724FAF8}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[7]" Type="Str">{525B7922-B6FB-456C-B8ED-A2345733B1A7}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[8]" Type="Str">{F440DB2B-650F-47EB-8BEC-C09E386E0339}</Property>
-				<Property Name="Exe_actXinfo_objCLSID[9]" Type="Str">{F31C6CDD-1070-44BE-835C-07528F3BC3C2}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[0]" Type="Str">{64FCBDAC-7BB1-46BE-AF35-2D6CB52270A2}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[1]" Type="Str">{F26B039F-B483-412A-B277-E0C5E7938CCE}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[10]" Type="Str">{65C48B8D-1EF4-423A-9534-7F5F9886628E}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[11]" Type="Str">{3E5344B8-D2F0-4923-A262-A9AE918B2D73}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[12]" Type="Str">{35BC07A8-3DDA-4176-8CB5-E22FFEE1F838}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[13]" Type="Str">{7E323E60-6940-4F6A-9DDD-AF8F906F1655}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[2]" Type="Str">{8589E182-A2D7-4717-AC5B-4D67E3DB2B61}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[3]" Type="Str">{A0A54BE9-3FA2-4A6E-8EAD-CB216F955498}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[4]" Type="Str">{6AF5780B-101A-4EBA-A56E-9ACBEFDEAAFE}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[5]" Type="Str">{07C6F956-D9CC-40FD-9904-619E4EE442CB}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[6]" Type="Str">{DA46E777-F2E1-47B3-A62E-795162C45CF5}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[7]" Type="Str">{6B7708C3-16E0-4535-A6BA-D06709FEF65F}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[8]" Type="Str">{6DC37FC6-060D-4856-A1C7-F7BC7EF8D277}</Property>
+				<Property Name="Exe_actXinfo_objCLSID[9]" Type="Str">{5AD97590-B423-40DD-92A0-B865D5E4A81E}</Property>
 				<Property Name="Exe_actXinfo_objCLSIDsCount" Type="Int">14</Property>
 				<Property Name="Exe_actXinfo_progIDPrefix" Type="Str">ColorView</Property>
 				<Property Name="Exe_actXServerName" Type="Str">ColorView</Property>
 				<Property Name="Exe_actXServerNameGUID" Type="Str">{E5EA1066-2646-4795-8CE8-758102F124CD}</Property>
-				<Property Name="Source[0].itemID" Type="Str">{A928D5B2-E542-4315-B832-CC068396BFBA}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{6B7DFB1C-AF53-49FC-AD86-977856CE9484}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/我的电脑/main.vi</Property>
@@ -286,7 +332,7 @@
 				<Property Name="INST_defaultDir" Type="Str">{3912416A-D2E5-411B-AFEE-B63654D690C0}</Property>
 				<Property Name="INST_language" Type="Int">2052</Property>
 				<Property Name="INST_productName" Type="Str">ColorView</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.3</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.4</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">18008012</Property>
 				<Property Name="MSI_arpCompany" Type="Str">合肥恒星科技开发有限公司</Property>
