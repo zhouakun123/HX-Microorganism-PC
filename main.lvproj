@@ -15,6 +15,7 @@
 		<Item Name="NI_Excel.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Utility/NIReport.llb/Excel/NI_Excel.lvclass"/>
 		<Item Name="NI_ReportGenerationToolkit.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_office/NI_ReportGenerationToolkit.lvlib"/>
 		<Item Name="recive_data_frame.vi" Type="VI" URL="../recive_data_frame.vi"/>
+		<Item Name="RGB_to_V.vi" Type="VI" URL="../RGB_to_V.vi"/>
 		<Item Name="save_data.vi" Type="VI" URL="../save_data.vi"/>
 		<Item Name="Template.xltx" Type="Document" URL="../Template.xltx"/>
 		<Item Name="u16_to_u8.vi" Type="VI" URL="../u16_to_u8.vi"/>
@@ -185,7 +186,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{14B68029-F99B-4386-8848-50DF1106013F}</Property>
-				<Property Name="Bld_version.build" Type="Int">14</Property>
+				<Property Name="Bld_version.build" Type="Int">19</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">ColorView.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/ColorView.exe</Property>
@@ -332,7 +333,7 @@
 				<Property Name="INST_defaultDir" Type="Str">{3912416A-D2E5-411B-AFEE-B63654D690C0}</Property>
 				<Property Name="INST_language" Type="Int">2052</Property>
 				<Property Name="INST_productName" Type="Str">ColorView</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.4</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.9</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">18008012</Property>
 				<Property Name="MSI_arpCompany" Type="Str">合肥恒星科技开发有限公司</Property>
